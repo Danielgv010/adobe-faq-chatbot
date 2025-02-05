@@ -1,0 +1,266 @@
+:root {
+    --win-gray: #c0c0c0;
+    --win-blue: #000080;
+    --win-border: #808080;
+    --win-highlight: #ffffff;
+    --win-shadow: #404040;
+    --taskbar-height: 40px;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: "MS Sans Serif", Tahoma, sans-serif;
+}
+
+body {
+    background-color: #008080;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.desktop {
+    flex: 1;
+    padding: 20px;
+    position: relative;
+}
+
+.window {
+    background: var(--win-gray);
+    border: 2px solid;
+    border-color: var(--win-highlight) var(--win-shadow) var(--win-shadow) var(--win-highlight);
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+    margin: 0 auto;
+    max-width: 800px;
+    width: 100%;
+    position: relative;
+}
+
+.minimized {
+    display: none;
+}
+
+.title-bar {
+    background: var(--win-blue);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4px;
+}
+
+.title-bar-text {
+    font-weight: bold;
+    margin-left: 4px;
+}
+
+.title-bar-controls {
+    display: flex;
+    gap: 2px;
+}
+
+.control-button {
+    background: var(--win-gray);
+    border: 1px solid;
+    border-color: var(--win-highlight) var(--win-shadow) var(--win-shadow) var(--win-highlight);
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.chat-container {
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    padding: 8px;
+}
+
+.toolbar {
+    padding: 4px;
+    border-bottom: 1px solid var(--win-shadow);
+    display: flex;
+    gap: 8px;
+}
+
+.toolbar-button {
+    background: var(--win-gray);
+    border: 2px solid;
+    border-color: var(--win-highlight) var(--win-shadow) var(--win-shadow) var(--win-highlight);
+    padding: 2px 8px;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.chat-messages {
+    flex-grow: 1;
+    border: 2px solid;
+    border-color: var(--win-shadow) var(--win-highlight) var(--win-highlight) var(--win-shadow);
+    background: white;
+    padding: 8px;
+    overflow-y: auto;
+    margin-bottom: 8px;
+}
+
+.message {
+    margin-bottom: 8px;
+    padding: 8px;
+    border-radius: 4px;
+}
+
+.message-timestamp {
+    font-size: 10px;
+    color: #666;
+    margin-top: 4px;
+}
+
+.user-message {
+    background: #e8e8e8;
+    margin-left: 20%;
+}
+
+.ai-message {
+    background: #d1e7f7;
+    margin-right: 20%;
+}
+
+.input-container {
+    display: flex;
+    gap: 8px;
+}
+
+.chat-input {
+    flex-grow: 1;
+    border: 2px solid;
+    border-color: var(--win-shadow) var(--win-highlight) var(--win-highlight) var(--win-shadow);
+    padding: 6px;
+    font-size: 14px;
+}
+
+.send-button {
+    background: var(--win-gray);
+    border: 2px solid;
+    border-color: var(--win-highlight) var(--win-shadow) var(--win-shadow) var(--win-highlight);
+    padding: 6px 12px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.send-button:active {
+    border-color: var(--win-shadow) var(--win-highlight) var(--win-highlight) var(--win-shadow);
+}
+
+.status-bar {
+    border-top: 2px solid;
+    border-color: var(--win-shadow) var(--win-highlight) var(--win-highlight) var(--win-shadow);
+    padding: 4px;
+    font-size: 12px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.taskbar {
+    height: var(--taskbar-height);
+    background: var(--win-gray);
+    border-top: 2px solid var(--win-highlight);
+    display: flex;
+    padding: 4px;
+    gap: 4px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.start-button {
+    background: var(--win-gray);
+    border: 2px solid;
+    border-color: var(--win-highlight) var(--win-shadow) var(--win-shadow) var(--win-highlight);
+    padding: 2px 8px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.start-button:active {
+    border-color: var(--win-shadow) var(--win-highlight) var(--win-highlight) var(--win-shadow);
+}
+
+.task-button {
+    background: var(--win-gray);
+    border: 2px solid;
+    border-color: var(--win-highlight) var(--win-shadow) var(--win-shadow) var(--win-highlight);
+    padding: 2px 8px;
+    flex-grow: 1;
+    max-width: 200px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.task-button.active {
+    border-color: var(--win-shadow) var(--win-highlight) var(--win-highlight) var(--win-shadow);
+    background: #dfdfdf;
+}
+
+.quick-launch {
+    display: flex;
+    gap: 4px;
+    padding: 0 8px;
+    border-right: 1px solid var(--win-shadow);
+}
+
+.system-tray {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding-left: 8px;
+    border-left: 1px solid var(--win-shadow);
+}
+
+.start-menu {
+    position: fixed;
+    bottom: var(--taskbar-height);
+    left: 0;
+    background: var(--win-gray);
+    border: 2px solid;
+    border-color: var(--win-highlight) var(--win-shadow) var(--win-shadow) var(--win-highlight);
+    width: 200px;
+    display: none;
+    padding: 4px;
+}
+
+.start-menu.active {
+    display: block;
+}
+
+.start-menu-item {
+    padding: 4px 8px;
+    cursor: pointer;
+}
+
+.start-menu-item:hover {
+    background: var(--win-blue);
+    color: white;
+}
+
+@media (max-width: 600px) {
+    .desktop {
+        padding: 10px;
+    }
+
+    .chat-container {
+        height: calc(80vh - var(--taskbar-height));
+    }
+
+    .user-message,
+    .ai-message {
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+}

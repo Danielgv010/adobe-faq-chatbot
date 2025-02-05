@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>qna-chat</title>
+    {% load static %}
+    <script src="{% static 'main/qna_format.js' %}"></script>
+    <link rel="stylesheet" href="{% static 'main/qna.css' %}">
+
+</head>
+
+<body>
+    <div class="desktop">
+        <div class="window" id="chatWindow">
+            <div class="title-bar">
+                <div class="title-bar-text">Adobe AI Assistant - Chat.exe</div>
+                <div class="title-bar-controls">
+                    <button class="control-button minimize">_</button>
+                    <button class="control-button maximize">□</button>
+                    <button class="control-button close">×</button>
+                </div>
+            </div>
+
+            <div class="toolbar">
+                <button class="toolbar-button" id="randomize">Randomize</button>
+            </div>
+
+            <div class="chat-container">
+                <div class="chat-messages" id="chatMessages">
+                    <div class="message ai-message">
+                        Welcome to Adobe AI Chat! How can I assist you today?
+                        <div class="message-timestamp">System message - 00:00:00</div>
+                    </div>
+                </div>
+
+                <div class="input-container">
+                    <input type="text" class="chat-input" id="chatInput" placeholder="Type your message here...">
+                    <button class="send-button" id="sendButton">Send</button>
+                </div>
+            </div>
+
+            <div class="status-bar">
+                <span id="status">Ready</span>
+                <span id="time"></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="taskbar">
+        <button class="start-button" id="startButton">
+            <span>Start</span>
+        </button>
+        <div class="quick-launch">
+            <button class="toolbar-button">📁</button>
+            <button class="toolbar-button">🌐</button>
+        </div>
+        <button class="task-button active">AI Assistant - Chat.exe</button>
+        <div class="system-tray">
+            <span id="trayTime">00:00</span>
+        </div>
+    </div>
+
+    <div class="start-menu" id="startMenu">
+        <div class="start-menu-item" id="openChatExe">Chat.exe</div>
+        <div class="start-menu-item">Documents</div>
+        <div class="start-menu-item">Settings</div>
+        <div class="start-menu-item">Find</div>
+        <div class="start-menu-item">Help</div>
+        <div class="start-menu-item">Run...</div>
+        <div class="start-menu-item">Log Off...</div>
+        <div class="start-menu-item">Shut Down...</div>
+    </div>
+</body>
+
+</html>
