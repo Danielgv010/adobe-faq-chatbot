@@ -1,0 +1,1 @@
+py -u qna_bot/manage.py runserver

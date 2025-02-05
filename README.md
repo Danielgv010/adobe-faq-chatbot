@@ -13,3 +13,9 @@ This project is designed to allow users to interact with an Azure QnA-based chat
 1. Download the installer.bat
 
 2. Run the installation script
+
+3. Create your QnA project in Azure Languaje Studio
+
+4. Configure the .env with the QnA project data
+
+5. Run run.bat to start the webpage
