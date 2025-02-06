@@ -8,8 +8,10 @@ from django.template import loader
 import csv
 from django.conf import settings
 
-# Load environment variables
-load_dotenv()
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+load_dotenv(os.path.join(BASE_DIR, '.env'))
+
 ai_endpoint = os.getenv('AI_SERVICE_ENDPOINT')
 ai_key = os.getenv('AI_SERVICE_KEY')
 ai_project_name = os.getenv('QA_PROJECT_NAME')
