@@ -19,3 +19,6 @@ This project is designed to allow users to interact with an Azure QnA-based chat
 4. Configure the .env with the QnA project data
 
 5. Run run.bat to start the webpage
+
+## Deployed project
+[Open project](https://danielgv010.pythonanywhere.com/)
