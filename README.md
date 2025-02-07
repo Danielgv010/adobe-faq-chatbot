@@ -22,3 +22,5 @@ This project is designed to allow users to interact with an Azure QnA-based chat
 
 ## Deployed project
 [Open project](https://danielgv010.pythonanywhere.com/)
+
+> When you open the webpage, you'll be greeted by a chat window. To interact with my Q&A bot deployment, simply use the "Randomize" button at the top of the chat to select one of the available questions for the bot.
